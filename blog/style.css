@@ -1,0 +1,253 @@
+:root{
+    --e-global-color-primary: #6EC1E4;
+    --e-global-color-secondary: #54595F;
+    --e-global-color-text: #7A7A7A;
+    --e-global-color-accent: #61CE70;
+    --e-global-color-b5af824: #001A5D;
+    --e-global-typography-primary-font-family: "Roboto";
+    --e-global-typography-primary-font-weight: 600;
+    --e-global-typography-secondary-font-family: "Roboto Slab";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Roboto";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "Roboto";
+    --e-global-typography-accent-font-weight: 500;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+/* header start */
+header a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    border-bottom: 1px solid var(--e-global-color-text);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.logo{
+    display: flex; 
+    align-items: center;
+}
+.logo .bar{
+    margin-right: 15px;
+    font-size: 20px;
+}
+nav{
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+}
+nav ul li{
+    margin: 0 20px 0 0;
+    font-size: 16px;
+    font-weight: var(--e-global-typography-primary-font-weight);
+    position: relative;
+}
+nav ul li::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #001A5D;
+    transition: 0.4s;
+}
+nav ul li:hover::after{
+    bottom: -5px;
+}
+nav ul li:last-child::after{
+    display: none;
+}
+nav ul li:last-child{
+    background-color: #001A5D;
+    height: 45px;
+    padding: 10px;
+    border: none;
+}
+nav ul li:last-child a{
+    align-items: center;
+    margin:0 7px;
+    color: white;
+}
+nav ul li:last-child input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* header end */
+
+/* banner start */
+.banner{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+}
+.banner .left{
+    height : 100vh;
+    width: 60%;
+    margin: 30px 0 30px 120px;
+    background-color: rgba(175, 175, 175, 0.7);
+    padding: 50px;
+    position: relative;
+}
+.banner .left .top{
+    display: flex;
+    align-items: center;
+}
+.banner .left .top .head{
+    font-size: 65px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    background-color: #001A5D; 
+    color: rgb(255, 255, 255);   
+    font-weight: bold;
+    cursor: pointer;
+}
+.banner .left h2{
+    font-size: 18px;
+    position: relative;
+    left: 30px;
+    cursor: pointer;
+}
+.banner .left h2::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 17px;
+    top: 12px;
+    height: 3px;
+    left: -20px;
+    z-index: 1000;
+}
+.banner .left h2::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 2px;
+    right: inherit;
+    z-index: 1000;
+    display: none;
+}
+.banner .left .top h2:hover::after{
+    display: block;
+}
+.banner .left .bottom{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+}
+.banner .left .bottom .head1{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.banner .left .bottom .date{
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.banner .left .bottom .date li{
+    margin-right: 25px;
+}
+.banner .left .bottom .date li span a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+.banner .left .bottom .date li:first-child::after{
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 40%;
+    height: 5px;
+    width: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    z-index: 3000;
+}
+.content{
+    font-size: 20px;
+    letter-spacing: 1px;
+    width: 96%;
+    margin-bottom: 20px;
+
+}
+.banner .left .bottom #btn{
+    background-color: #001A5D;
+    height: 45px;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    letter-spacing: 1px;
+}
+
+
+.banner .right{
+    height : 100vh;
+    width: 30%;
+    margin: 30px 120px 0 0;
+    background-color: rgba(90, 90, 248, 0.7);
+    padding: 50px;
+}
+.banner .right h4{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.banner .right h4::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+.banner .right ul{
+    list-style-type: none;
+}
+.banner .right ul li{
+    margin-bottom: 20px;
+}
+.banner .right ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+.banner .right ul li a:hover{
+    color: white;
+}
+
+/* banner end */
+
+.articles{
+    position: relative;
+}
